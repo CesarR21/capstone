@@ -5,11 +5,13 @@ import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
+import { AppProvider } from './context/AppContex';
 
 
 const App = () => {
   return (
-    <div className='container'>
+    <AppProvider>
+ <div className='container'>
       <h1 className='mt-3'>BUDGET MASTER APP</h1>
       <div className='row mt-3'>
         <div className='col-sm'>
@@ -35,6 +37,9 @@ const App = () => {
         </div>
       </div>
     </div>
+
+    </AppProvider>
+   
   );
 };
 

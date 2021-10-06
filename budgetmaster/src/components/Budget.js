@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext }from 'react';
+import { AppContext } from '../context/AppContex';
+
 
 const Budget = () => {
+    const {budget}=useContext(AppContext)
     return (
      <div className='alert alert-success'>
-        <span>BUDGET: $2000
+        <span>BUDGET: ${budget}
 
         </span>
     </div>       
