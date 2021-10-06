@@ -1,11 +1,19 @@
-import React from 'react'
+import React,{ useContext } from 'react';
+import  {AppContext, } from '../context/AppContex'
+
 
 const Remaining = () =>{
+    const {expenses, budget} =useContext(AppContext);
+    const totalExpenses = expenses.reduce((total,item)=>{
+        return (total = total + item.cost);
+        },0);
+
+        const alertType = totalExpenses > budget? 'alert-danger':'alert-success'
+   
     return (
-        <div className='alert alert-success'>
-            <span>
-                REMAINING: $1200
-            </span>
+        <div className={`alert ${alertType}`}>
+            <span>REMAINING: ${budget - totalExpenses}</span>
+            
         </div>
     );
 

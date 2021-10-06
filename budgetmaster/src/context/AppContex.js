@@ -6,7 +6,7 @@ const AppReducer = (state, action) =>{
         case 'ADD_EXPENSE':
             return{
                 ...state,
-                expenses:[...state.expenses, action.payload],
+                expenses: [...state.expenses, action.payload],
             };
         default:
             return state;
@@ -26,12 +26,16 @@ export const AppContext = createContext();
 
 export const AppProvider=(props)=> {
     const[state, dispatch]= useReducer(AppReducer, initialState);
-    return(<AppContext.Provider value={{
+    return(
+    <AppContext.Provider 
+        value={{
         budget:state.budget,
         expenses:state.expenses,
         dispatch,
-    }}>
+    }}
+    >
         {props.children}
-    </AppContext.Provider>)
+    </AppContext.Provider>
+  );
 };
 

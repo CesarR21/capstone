@@ -3,8 +3,9 @@ import { AppContext } from "../context/AppContex";
 import {v4 as uuidv4} from 'uuid';
 
 
-const AddExpenseForm = () =>{
+const AddExpenseForm = (props) =>{
     const{dispatch} = useContext(AppContext);
+   
     const [name, setName] = useState('');
     const[cost, setCost] = useState('');
 
@@ -13,7 +14,7 @@ const AddExpenseForm = () =>{
         
         const expense={
             id:uuidv4(),
-            name: name,
+            name,
             cost: parseInt(cost),
         };
         dispatch({
@@ -21,6 +22,8 @@ const AddExpenseForm = () =>{
             payload: expense,
 
         });
+        setName('');
+        setCost('');
     };
 
     return (
