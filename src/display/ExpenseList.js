@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
+import {BudgetConsumer} from '../store';
 
 class ExpenseList extends Component{
     render(){
         return(
-            <div className="card card-body">
+            <div className="card mt-5">
                 <table className="table-borderd">
                     <thead>
                         <tr>
-                            <th>title</th>
+                            <th>Title</th>
                             <th>Amount</th>
                             
                         </tr>
                     </thead>
-                    <tbody>
+                    <BudgetConsumer>
+                        {value => {
+                            const expensesList = value.expenses.length > 0?(
+                                value.expenses.map((expense,index) =>{
+                                    return (
+                                        <tr key={index}>
+                                        <td>{expense.title}</td>
+                                        <td>{expense.amount}</td>
+                                        </tr>
+                                    )
+                                })
+                            ) : (
+                                <tr>
+                                    <td>No Listed Expense Yet</td>
+                                </tr>
+                            )
+                            return <tbody>{expensesList}</tbody>
 
-                    </tbody>
+                        }}
+                    </BudgetConsumer>
+                   
                 </table>
             </div>
         )
