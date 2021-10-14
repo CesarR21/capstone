@@ -1,0 +1,286 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Home Wrappers */
+.headerContainer {
+  position: relative;
+  z-index: 9999;
+  background-color: #333;
+}
+
+.timeframeContainer {
+  margin-top: 10px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.footerContainer {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  height: 630px;
+  width: 450px;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 10px;
+  height: 450px;
+  width: 250px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Header */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.headerLogo {
+  letter-spacing: 1px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px 20px 20px;
+  cursor: default;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.headerDropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.headerContent {
+  position: absolute;
+  right: 0;
+  background-color:  #333;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.headerContent a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headerContent a:hover {background-color: #222;}
+
+.headerDropDown:hover .dropbtn {
+  background-color: #222;
+}
+
+/* Time Frame */
+.timeframeButtonGroup button {
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 5px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; 
+  width: 33.33%;
+  border: none
+}
+.timeframeButtonGroup:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.timeframeButtonGroup button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.timeframeButtonGroup button:hover {
+  filter: brightness(90%);
+}
+
+.timeframeButtonGroup button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.timeframeButtonGroup button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+/* Data visualisation */
+.pieChart {
+  margin: 0px 0px 20px;
+}
+
+/* Add Transaction Form */
+.gridContainer {
+  display: grid;
+  grid-template-columns: 225px 225px;
+}
+
+.labelStyle {
+  margin: 0px 6px;
+}
+
+.inputStyle {
+  margin: 4px 4px;
+  padding: 2px;
+  font-size: 16px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: black;
+}
+
+.buttonStyle {
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 4px 4px;
+  padding: 2px;
+  cursor: pointer;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonStyle:hover {
+  filter: brightness(90%);
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  margin: 4px 6px;
+  padding: 7px;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: black;
+  width: 100%;
+}
+
+/* Transactions */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.tableStyle {
+  overflow:hidden;
+  overflow-y: scroll;
+  height: 380px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #111;
+  border-width: 2px;
+  margin: 20px 0 0 0;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  position: relative;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 7px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #aaaaaa;
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+tr:hover {
+  background-color: #dddddd;
+}
+
+/* Transaction Delete Button */
+.deleteButton {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(253, 56, 34);
+  color: white;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  filter: brightness(90%);
+}
+
+/* Footer */
+.footer {
+  align-content: center;
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  width: 480px;
+  padding: 10px 0 10px 0;
+  position: relative;
+}
+
+.footer > p,
+a {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.footer > p {
+  line-height: 30px;
+}
+
+svg > g > g:last-child {
+  pointer-events: none;
+}
