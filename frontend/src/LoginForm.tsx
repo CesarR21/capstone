@@ -28,7 +28,7 @@ export default function LoginForm({
     <div>
       <div className={styles.headerContainer}>
         <nav>
-          <li className={styles.headerLogo}>Financial Freedom</li>
+          <li className={styles.headerLogo}>BUDGETXMASTER</li>
         </nav>
       </div>
       <div className={styles.contentContainer}>

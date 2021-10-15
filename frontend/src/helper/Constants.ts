@@ -7,7 +7,7 @@ export const INCOME_CATEGORIES: string[] = [
   'Savings',
   'Bonus',
   'Dividends',
-  'Other'
+  'CryptoINV'
 ];
 
 export const EXPENSE_CATEGORIES: string[] = [
@@ -20,11 +20,11 @@ export const EXPENSE_CATEGORIES: string[] = [
   'Health',
   'Insurance',
   'Household Items',
-  'Subscriptions',
-  'Debt',
+  'Family Account',
+  'Family Account',
   'Savings',
   'Entertainment',
-  'Other'
+  'CryptoINV'
 ];
 
 export const baseUrl: string = "https://financial-freedom-api.herokuapp.com"
