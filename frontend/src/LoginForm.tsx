@@ -145,8 +145,8 @@ export default function LoginForm({
         <div className={styles.loginForm}>
           <h1>Info</h1>
           <p style={{ marginTop: "20px" }}>
-            You can either log in as a guest, register yourself, login with
-            google, or use some existing dummy users like:
+       "FAILURE IS THE PATH TO SUCCESS. WELCOME TO BUDGETMASTERX"
+
           </p>
           <table style={{ marginTop: "20px", width: "100px" }}>
             <thead>
